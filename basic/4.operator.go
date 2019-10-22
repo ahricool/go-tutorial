@@ -1,4 +1,4 @@
-package basic
+package main
 
 // Go 支持 ++ --
 // && 逻辑 AND

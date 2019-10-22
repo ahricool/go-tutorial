@@ -1,5 +1,5 @@
 
-package basic
+package main
 
 import "fmt"
 import "unsafe"
@@ -15,7 +15,7 @@ const (
 	male    = 2
 )
 
-// 常量还可以使用函数来计算，必须为内置函数。
+// 常量还可以使用函数来计算，必须为内置函数。常量在编译期间值必须确定下来。
 const (
 	a1="abc"
 	b1=len(a1)
@@ -28,14 +28,16 @@ const (
 
 // const 中未赋值的变量 h2 ，将自动赋值为上一个变量g2
 const(
-	a2=iota
-	b2=iota
-	c2
-	d2,e2,f2=iota,iota,iota
+	//a0
+	a2=iota //iota=0
+	b2=iota //iota=1
+	c2      // 常量没有被初始化 则自动初始化为上一个常量的值 c2=2 当然第一常量不允许这样做
+	d2,e2,f2=iota,iota,iota // iota=3
 	g2=100
 	h2  //没有错误 idea 显示有问题
 
 )
+
 
 // <<iota  <<表示左移的意思 即二进制左移iota位 相当于 *2*iota
 const(
@@ -54,14 +56,21 @@ func constTest(){
 }
 
 func main() {
+	// 常量
 	const LENGTH int = 10
 	const WIDTH int = 5
 	var area int
 	const a, b, c = 1, false, "str"
 	area = LENGTH * WIDTH
-	fmt.Print("The area is: %d", area)
 
-	println()
+	// Printf 格式化输出
+	fmt.Printf("The area is: %d \n", area)
+
+
 	println(a, b, c)
+	println("-------------")
+
+	//println()
+	//fmt.Println()
 	constTest()
 }
