@@ -15,46 +15,9 @@ func main(){
 	完全类似 Java 的注释形式
 	 */
 
-	//fmt.Println("Hello,World!")
-	//// Println 会自动换行
-	//res:= make(map[string]int)
-	//res["sad"]=1
-	//for k,v:=range res{
-	//	fmt.Println(k)
-	//	fmt.Println(v)
-	//}
-	//var key string
-	//if (key ==""){
-	//	fmt.Println("What???")
-	//}
-	//
-	//
-	//var aa float64=111.23
-	//fmt.Println(int(aa))
-	//
-	//notFillinDimension := []string{"123","asd","zcx"}
-	//if _,ok:=notFillinDimension.;!ok{
-	//	print("hello")
-	//}else{
-	//	print("word")
-	//}
+	fmt.Print("Hello, World!")
 
-	//wg := sync.WaitGroup{}
-	//wg.Add(20)
-	//for i := 0; i < 10; i++ {
-	//	go func() {
-	//		fmt.Println("A: ", i)
-	//		wg.Done()
-	//	}()
-	//}
-	//for i := 0; i < 10; i++ {
-	//	go func(i int) {
-	//		fmt.Println("B: ", i)
-	//		wg.Done()
-	//	}(i)
-	//}
-	//wg.Wait()
-	fmt.Print("Hello")
+
 	var a=fmt.Sprintf("%+v","asdasdsad"[0:100])
 	fmt.Print(a)
 
